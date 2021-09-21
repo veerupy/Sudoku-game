@@ -1,3 +1,4 @@
+![sudoku-2](https://user-images.githubusercontent.com/67237236/134207627-50b73885-dcb5-4e99-883e-92df13bb258f.png)
 
 # SUDOKU GAME
 
