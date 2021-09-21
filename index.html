@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Sudoku-game</title>
+</head>
+
+<body>
+    <header>
+        <div>Sudoku Game</div>
+    </header>
+    <div class="secBox">
+        <div>
+            <button id="start">Start</button>
+        </div>
+        <div>
+            <label for="diff_level">Difficulty : </label>
+            <select name="diff_level" id="level">
+                <option value="easy">Easy</option>
+                <option value="medium">Medium</option>
+                <option value="hard">Hard</option>
+                <option value="hardest">Hardest</option>
+            </select>
+        </div>
+
+        <div id="curTime">Timer 00:00</div>
+    </div>
+    <section>
+        <div class="board">
+            <table>
+                <tr>
+                    <td><input id="td1" type="text" pattern="\d*" maxlength="1"></td>
+                    <td><input id="td2" type="text" pattern="\d*" maxlength="1"></td>
+                    <td><input id="td3" type="text" pattern="\d*" maxlength="1"></td>
+                    <td><input id="td4" type="text" pattern="\d*" maxlength="1"></td>
+                    <td><input id="td5" type="text" pattern="\d*" maxlength="1"></td>
+                    <td><input id="td6" type="text" pattern="\d*" maxlength="1"></td>
+                    <td><input id="td7" type="text" pattern="\d*" maxlength="1"></td>
+                    <td><input id="td8" type="text" pattern="\d*" maxlength="1"></td>
+                    <td><input id="td9" type="text" pattern="\d*" maxlength="1"></td>
+                </tr>
+                <tr>
+                    <td><input id="td10" type="text" pattern="\d*" maxlength="1"></td>
+                    <td><input id="td11" type="text" pattern="\d*" maxlength="1"></td>
+                    <td><input id="td12" type="text" pattern="\d*" maxlength="1"></td>
+                    <td><input id="td13" type="text" pattern="\d*" maxlength="1"></td>
+                    <td><input id="td14" type="text" pattern="\d*" maxlength="1"></td>
+                    <td><input id="td15" type="text" pattern="\d*" maxlength="1"></td>
+                    <td><input id="td16" type="text" pattern="\d*" maxlength="1"></td>
+                    <td><input id="td17" type="text" pattern="\d*" maxlength="1"></td>
+                    <td><input id="td18" type="text" pattern="\d*" maxlength="1"></td>
+                </tr>
+                <tr>
+                    <td><input id="td19" type="text" pattern="\d*" maxlength="1"></td>
+                    <td><input id="td20" type="text" pattern="\d*" maxlength="1"></td>
+                    <td><input id="td21" type="text" pattern="\d*" maxlength="1"></td>
+                    <td><input id="td22" type="text" pattern="\d*" maxlength="1"></td>
+                    <td><input id="td23" type="text" pattern="\d*" maxlength="1"></td>
+                    <td><input id="td24" type="text" pattern="\d*" maxlength="1"></td>
+                    <td><input id="td25" type="text" pattern="\d*" maxlength="1"></td>
+                    <td><input id="td26" type="text" pattern="\d*" maxlength="1"></td>
+                    <td><input id="td27" type="text" pattern="\d*" maxlength="1"></td>
+                </tr>
+                <tr>
+                    <td><input id="td28" type="text" pattern="\d*" maxlength="1"></td>
+                    <td><input id="td29" type="text" pattern="\d*" maxlength="1"></td>
+                    <td><input id="td30" type="text" pattern="\d*" maxlength="1"></td>
+                    <td><input id="td31" type="text" pattern="\d*" maxlength="1"></td>
+                    <td><input id="td32" type="text" pattern="\d*" maxlength="1"></td>
+                    <td><input id="td33" type="text" pattern="\d*" maxlength="1"></td>
+                    <td><input id="td34" type="text" pattern="\d*" maxlength="1"></td>
+                    <td><input id="td35" type="text" pattern="\d*" maxlength="1"></td>
+                    <td><input id="td36" type="text" pattern="\d*" maxlength="1"></td>
+                </tr>
+                <tr>
+                    <td><input id="td37" type="text" pattern="\d*" maxlength="1"></td>
+                    <td><input id="td38" type="text" pattern="\d*" maxlength="1"></td>
+                    <td><input id="td39" type="text" pattern="\d*" maxlength="1"></td>
+                    <td><input id="td40" type="text" pattern="\d*" maxlength="1"></td>
+                    <td><input id="td41" type="text" pattern="\d*" maxlength="1"></td>
+                    <td><input id="td42" type="text" pattern="\d*" maxlength="1"></td>
+                    <td><input id="td43" type="text" pattern="\d*" maxlength="1"></td>
+                    <td><input id="td44" type="text" pattern="\d*" maxlength="1"></td>
+                    <td><input id="td45" type="text" pattern="\d*" maxlength="1"></td>
+                </tr>
+                <tr>
+                    <td><input id="td46" type="text" pattern="\d*" maxlength="1"></td>
+                    <td><input id="td47" type="text" pattern="\d*" maxlength="1"></td>
+                    <td><input id="td48" type="text" pattern="\d*" maxlength="1"></td>
+                    <td><input id="td49" type="text" pattern="\d*" maxlength="1"></td>
+                    <td><input id="td50" type="text" pattern="\d*" maxlength="1"></td>
+                    <td><input id="td51" type="text" pattern="\d*" maxlength="1"></td>
+                    <td><input id="td52" type="text" pattern="\d*" maxlength="1"></td>
+                    <td><input id="td53" type="text" pattern="\d*" maxlength="1"></td>
+                    <td><input id="td54" type="text" pattern="\d*" maxlength="1"></td>
+                </tr>
+                <tr>
+                    <td><input id="td55" type="text" pattern="\d*" maxlength="1"></td>
+                    <td><input id="td56" type="text" pattern="\d*" maxlength="1"></td>
+                    <td><input id="td57" type="text" pattern="\d*" maxlength="1"></td>
+                    <td><input id="td58" type="text" pattern="\d*" maxlength="1"></td>
+                    <td><input id="td59" type="text" pattern="\d*" maxlength="1"></td>
+                    <td><input id="td60" type="text" pattern="\d*" maxlength="1"></td>
+                    <td><input id="td61" type="text" pattern="\d*" maxlength="1"></td>
+                    <td><input id="td62" type="text" pattern="\d*" maxlength="1"></td>
+                    <td><input id="td63" type="text" pattern="\d*" maxlength="1"></td>
+                </tr>
+                <tr>
+                    <td><input id="td64" type="text" pattern="\d*" maxlength="1"></td>
+                    <td><input id="td65" type="text" pattern="\d*" maxlength="1"></td>
+                    <td><input id="td66" type="text" pattern="\d*" maxlength="1"></td>
+                    <td><input id="td67" type="text" pattern="\d*" maxlength="1"></td>
+                    <td><input id="td68" type="text" pattern="\d*" maxlength="1"></td>
+                    <td><input id="td69" type="text" pattern="\d*" maxlength="1"></td>
+                    <td><input id="td70" type="text" pattern="\d*" maxlength="1"></td>
+                    <td><input id="td71" type="text" pattern="\d*" maxlength="1"></td>
+                    <td><input id="td72" type="text" pattern="\d*" maxlength="1"></td>
+                </tr>
+                <tr>
+                    <td><input id="td73" type="text" pattern="\d*" maxlength="1"></td>
+                    <td><input id="td74" type="text" pattern="\d*" maxlength="1"></td>
+                    <td><input id="td75" type="text" pattern="\d*" maxlength="1"></td>
+                    <td><input id="td76" type="text" pattern="\d*" maxlength="1"></td>
+                    <td><input id="td77" type="text" pattern="\d*" maxlength="1"></td>
+                    <td><input id="td78" type="text" pattern="\d*" maxlength="1"></td>
+                    <td><input id="td79" type="text" pattern="\d*" maxlength="1"></td>
+                    <td><input id="td80" type="text" pattern="\d*" maxlength="1"></td>
+                    <td><input id="td81" type="text" pattern="\d*" maxlength="1"></td>
+                </tr>
+            </table>
+        </div>
+    </section>
+    <script src="app.js"></script>
+</body>
+
+</html>
